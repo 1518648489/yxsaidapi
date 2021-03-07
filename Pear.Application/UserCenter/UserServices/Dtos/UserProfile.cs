@@ -1,4 +1,5 @@
 ﻿using Pear.Core;
+using System;
 
 namespace Pear.Application.UserCenter
 {
@@ -41,5 +42,10 @@ namespace Pear.Application.UserCenter
         /// 是否启用
         /// </summary>
         public bool Enabled { get; set; }
+
+        /// <summary>
+        /// 注册时间
+        /// </summary>
+        public DateTimeOffset CreatedTime { get; set; }
     }
 }

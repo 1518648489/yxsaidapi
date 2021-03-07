@@ -5,7 +5,7 @@ using System;
 
 namespace Pear.EntityFramework.Core
 {
-    [AppDbContext("Furion", DbProvider.Sqlite)]
+    [AppDbContext("Furion", DbProvider.SqlServer)]
     public class PearDbContext : AppDbContext<PearDbContext>, IModelBuilderFilter
     {
         public PearDbContext(DbContextOptions<PearDbContext> options) : base(options)

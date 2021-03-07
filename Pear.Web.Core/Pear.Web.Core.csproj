@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Pear.Application\Pear.Application.csproj" />
     <ProjectReference Include="..\Pear.Database.Migrations\Pear.Database.Migrations.csproj" />
   </ItemGroup>

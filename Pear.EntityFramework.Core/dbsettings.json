@@ -1,5 +1,5 @@
-{
+﻿{
   "ConnectionStrings": {
-    "Furion": "Data Source=./Furion.db"
+    "Furion": "Server=(localdb)\\MSSQLLocalDB;  Database=FurionCms; Trusted_Connection=True;MultipleActiveResultSets=true;"
   }
 }

@@ -349,12 +349,6 @@
             </remarks>
             <returns></returns>
         </member>
-        <member name="M:Pear.Application.UserCenter.AuthorizeService.LogOut">
-            <summary>
-            退出登录
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:Pear.Application.UserCenter.LoginInput">
             <summary>
             登录模型
@@ -874,6 +868,11 @@
         <member name="P:Pear.Application.UserCenter.UserProfile.Enabled">
             <summary>
             是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.CreatedTime">
+            <summary>
+            注册时间
             </summary>
         </member>
         <member name="T:Pear.Application.UserCenter.IUserAppService">
