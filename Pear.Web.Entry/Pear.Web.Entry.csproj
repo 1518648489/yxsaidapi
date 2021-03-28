@@ -22,10 +22,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Pear.Web.Core\Pear.Web.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Update="Dockerfile">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
 
 </Project>
