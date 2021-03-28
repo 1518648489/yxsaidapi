@@ -1,5 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "Furion": "Server=(localdb)\\MSSQLLocalDB;  Database=FurionCms; Trusted_Connection=True;MultipleActiveResultSets=true;"
+    "Furion": "Server=47.98.171.136; Database=DevStudentManagement; User Id=sa;Password=1518648489@qq.com;Connect Timeout=500"
   }
 }
