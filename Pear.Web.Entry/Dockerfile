@@ -5,8 +5,6 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-RUN sed -i's / TLSv1.2 / TLSv1.0 / g'/etc/ssl/openssl.cnf
-
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["Pear.Web.Entry/Pear.Web.Entry.csproj", "Pear.Web.Entry/"]
