@@ -17,7 +17,7 @@ namespace Pear.Core
         /// </summary>
         public Role()
         {
-            CreatedTime = DateTimeOffset.Now;
+            CreatedTime = DateTime.Now;
             IsDeleted = false;
             Enabled = true;
         }

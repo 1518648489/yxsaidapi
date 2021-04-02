@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Pear.Database.Migrations.Migrations
 {
-    public partial class init : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,13 +13,13 @@ namespace Pear.Database.Migrations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Remark = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
-                    CreatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(32) CHARACTER SET utf8mb4", maxLength: 32, nullable: false),
+                    Remark = table.Column<string>(type: "varchar(200) CHARACTER SET utf8mb4", maxLength: 200, nullable: true),
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    CreatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,13 +31,13 @@ namespace Pear.Database.Migrations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UniqueName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Remark = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
-                    CreatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    UniqueName = table.Column<string>(type: "varchar(100) CHARACTER SET utf8mb4", maxLength: 100, nullable: false),
+                    Remark = table.Column<string>(type: "varchar(200) CHARACTER SET utf8mb4", maxLength: 200, nullable: false),
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    CreatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,15 +49,15 @@ namespace Pear.Database.Migrations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Remark = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(32) CHARACTER SET utf8mb4", maxLength: 32, nullable: false),
+                    Remark = table.Column<string>(type: "varchar(200) CHARACTER SET utf8mb4", maxLength: 200, nullable: true),
                     Sequence = table.Column<int>(type: "int", nullable: false),
                     HigherId = table.Column<int>(type: "int", nullable: true),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
-                    CreatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    CreatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -74,18 +75,18 @@ namespace Pear.Database.Migrations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Account = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Nickname = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
-                    Photo = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
-                    Synopsis = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Account = table.Column<string>(type: "varchar(32) CHARACTER SET utf8mb4", maxLength: 32, nullable: false),
+                    Password = table.Column<string>(type: "varchar(32) CHARACTER SET utf8mb4", maxLength: 32, nullable: false),
+                    Nickname = table.Column<string>(type: "varchar(32) CHARACTER SET utf8mb4", maxLength: 32, nullable: true),
+                    Photo = table.Column<string>(type: "varchar(256) CHARACTER SET utf8mb4", maxLength: 256, nullable: true),
+                    Synopsis = table.Column<string>(type: "varchar(200) CHARACTER SET utf8mb4", maxLength: 200, nullable: true),
                     Gender = table.Column<int>(type: "int", nullable: false),
-                    SigninedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
-                    CreatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    SigninedTime = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    CreatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,15 +122,15 @@ namespace Pear.Database.Migrations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Remark = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "varchar(32) CHARACTER SET utf8mb4", maxLength: 32, nullable: false),
+                    Remark = table.Column<string>(type: "varchar(200) CHARACTER SET utf8mb4", maxLength: 200, nullable: true),
                     Sequence = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    Enabled = table.Column<bool>(type: "bit", nullable: false),
-                    CreatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Enabled = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    CreatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: false),
+                    UpdatedTime = table.Column<DateTimeOffset>(type: "datetime(6)", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -211,7 +212,7 @@ namespace Pear.Database.Migrations.Migrations
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "Id", "Account", "CreatedTime", "Enabled", "Gender", "IsDeleted", "Nickname", "Password", "Photo", "SigninedTime", "Synopsis", "UpdatedTime" },
-                values: new object[] { 1, "admin", new DateTimeOffset(new DateTime(2020, 12, 17, 10, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 8, 0, 0, 0)), true, 0, false, null, "21232f297a57a5a743894a0e4a801fc3", null, new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)), null, null });
+                values: new object[] { 1, "admin", new DateTimeOffset(new DateTime(2020, 12, 17, 10, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 8, 0, 0, 0)), true, 0, false, null, "21232f297a57a5a743894a0e4a801fc3", null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null });
 
             migrationBuilder.InsertData(
                 table: "RoleSecurity",

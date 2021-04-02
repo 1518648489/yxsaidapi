@@ -15,7 +15,7 @@ namespace Pear.Core
         /// </summary>
         public Security()
         {
-            CreatedTime = DateTimeOffset.Now;
+            CreatedTime = DateTime.Now;
             IsDeleted = false;
             Enabled = true;
         }

@@ -17,7 +17,7 @@ namespace Pear.Core
         /// </summary>
         public SystemDataCategory()
         {
-            CreatedTime = DateTimeOffset.Now;
+            CreatedTime = DateTime.Now;
             IsDeleted = false;
             Sequence = 0;
             Enabled = true;

@@ -17,7 +17,7 @@ namespace Pear.Core
         /// </summary>
         public User()
         {
-            CreatedTime = DateTimeOffset.Now;
+            CreatedTime = DateTime.Now;
             IsDeleted = false;
             Enabled = true;
         }
@@ -60,7 +60,7 @@ namespace Pear.Core
         /// <summary>
         /// 最近登录时间
         /// </summary>
-        public DateTimeOffset SigninedTime { get; set; }
+        public DateTime SigninedTime { get; set; }
 
         /// <summary>
         /// 是否启用

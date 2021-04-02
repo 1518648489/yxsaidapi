@@ -63,7 +63,7 @@ namespace Pear.Application.UserCenter
             _ = user ?? throw Oops.Oh(SystemErrorCodes.u1000);
 
             // 更新登录时间
-            user.SigninedTime = DateTimeOffset.Now;
+            user.SigninedTime = DateTime.Now;
 
             // 映射结果
             var output = user.Adapt<LoginOutput>();
