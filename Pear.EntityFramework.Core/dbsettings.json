@@ -1,6 +1,7 @@
 ﻿{
   "ConnectionStrings": {
     //"Furion": "Server=47.98.171.136; Database=DevStudentManagement; User Id=sa;Password=1518648489@qq.com;Connect Timeout=500"
-    "Furion": "server=121.5.63.51;database=YxSaidCms;user=root;password=1518648489@qq.com;port=3306;pooling=true;max pool size=20;persist security info=True;charset=utf8;"
+    //"Furion": "server=121.5.63.51;database=YxSaidCms;user=root;password=1518648489@qq.com;port=3306;pooling=true;max pool size=20;persist security info=True;charset=utf8;",
+    "Furion": "server=47.97.169.144;database=YxSaidCms;user=root;password=1518648489@qq.com;port=3306;pooling=true;max pool size=20;persist security info=True;charset=utf8;"
   }
 }
