@@ -129,7 +129,7 @@ namespace Pear.Application.UserCenter
         [ApiDescriptionSettings(KeepVerb = true)]
         public async Task<SystemDataCategoryProfile> AddAsync([Required] EditSystemDataCategoryInput input)
         {
-            // 判断分类名是否存在
+            // 判断分类名是否存在1
             var isExist = await _categoryRepository.AnyAsync(u => u.Name.Trim().Equals(input.Name.Trim()));
             if (isExist) throw Oops.Oh(SystemErrorCodes.u1006);
 
